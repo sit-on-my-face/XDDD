@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be My GF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    #main {
+      background-color: pink;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #yesScreen, #noScreen {
+      display: none;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    #yesScreen {
+      background-color: purple;
+      color: white;
+    }
+    #noScreen {
+      background-color: red;
+      color: white;
+    }
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .yes-btn {
+      background-color: lightgreen;
+      color: black;
+    }
+    .no-btn {
+      background-color: lightcoral;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Screen -->
+  <div id="main">
+    <h1>Be my GF ❤️</h1>
+    <button class="yes-btn" onclick="showYes()">Yes</button>
+    <button class="no-btn" onclick="showNo()">No</button>
+  </div>
+
+  <!-- Yes Screen -->
+  <div id="yesScreen">
+    <h1>Shte te izqm dimanke 🤭 😋</h1>
+  </div>
+
+  <!-- No Screen -->
+  <div id="noScreen">
+    <h1>Shte se grumna 😭</h1>
+  </div>
+
+  <script>
+    function showYes() {
+      document.getElementById("main").style.display = "none";
+      document.getElementById("yesScreen").style.display = "flex";
+    }
+
+    function showNo() {
+      document.getElementById("main").style.display = "none";
+      document.getElementById("noScreen").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
